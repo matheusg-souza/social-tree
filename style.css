@@ -1,0 +1,201 @@
+:root {
+  --black: #171717;
+  --white: #eee;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+} 
+
+ /* Usa os elementos body, html para definir estilos globais */
+body, html .darkmode {
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+  background: var(--white);  
+} 
+
+/* html {
+  background: #80add8;  
+} */
+
+.container {
+  display: flex; /*Vai deixar os conteudos flexiveis*/
+  align-items: center; /*Alinhar os itens entre eles mesmos*/
+  justify-content: center; /*Justificar o conteudo ao centro*/
+}
+
+.container .tree-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.tree-container .avatar {
+  width: 213px;
+  height: 213px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--black);
+  border-radius: 50%;
+}
+
+.tree-container .avatar img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+.tree-container .github-user {
+  margin-top: 15px;
+  color: var(--black);
+}
+
+.tree-container .links-container {
+  margin-top: 17px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.links-container .link {
+  margin-top: 16px;
+  width: 325px;
+  border: 2px solid var(--black);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase; 
+  text-align: center;
+  padding: 12px 0;
+  transition: ease 0.3s;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.29);
+}
+
+a:-webkit-any-link {
+  color: var(--black);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.links-container a {
+  text-decoration: none;
+}
+
+/*hover = mouse passa por cima do elemento*/
+.links-container .link:hover {
+  background-color: var(--black);
+  color: var(--white); /* cor do texto durante o hover */
+  transition: ease 0.5s;
+}
+
+.tree-container .socials-container {
+  margin-top: 50px;
+  margin-bottom: 16px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 29px;
+  
+}
+
+.socials-container .social {
+  transform: scale(0.9);
+  transition: ease 0.2s;
+  fill: var(--white);
+}
+
+.socials-container .social:hover {
+  transform: scale(1);
+}
+
+/* Altera a cor de fundo da barra de rolagem */
+::-webkit-scrollbar {
+  background-color: #fff;
+}
+
+/* Altera a cor da alça da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border-radius: 5px;
+  border: 2px solid #f1f1f1;
+}
+
+/* Toggle Button */
+#toggle {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 60px;
+  height: 30px;
+  border-radius: 30px;
+  background-color: #333;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  transition: all 0.5s ease-in;
+  cursor: pointer;
+  z-index: 1;
+
+}
+
+/* Making a dot switch inside the Toggle Button */
+#toggle::before {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: all 0.5s ease-in;
+}
+
+/* Changing toggle button background when checked */
+#toggle:checked {
+  background: var(--white);
+}
+
+/* Changing dot switch color and moving to the right side when checked */
+#toggle:checked::before {
+  background: #333;
+  left: 32px;
+}
+
+/* Changing the background & font color when checked */
+.dark-mode {
+  background: #333; 
+  color: var(--white);
+}
+
+.dark-mode .github-user{
+  color: var(--white);
+}
+
+.dark-mode .links-container .link:hover{
+  color: #333;
+  background-color: var(--white);
+}
+
+.dark-mode .links-container .link{
+  color: var(--white);
+  box-shadow: 2px 2px 4px rgba(245, 245, 245, 0.29);
+  border: 2px solid var(--white);
+}
+
+.dark-mode .tree-container .avatar{
+  border: 1px solid var(--white);
+}
+
+.dark-mode .socials-container .social {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background-color: var(--white);
+  box-shadow: 0px 3px 3px var(--white);
+}
+
