@@ -17,10 +17,6 @@ body, html .darkmode {
   background: var(--white);  
 } 
 
-/* html {
-  background: #80add8;  
-} */
-
 .container {
   display: flex; /*Vai deixar os conteudos flexiveis*/
   align-items: center; /*Alinhar os itens entre eles mesmos*/
@@ -98,7 +94,6 @@ a:-webkit-any-link {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 29px;
-  
 }
 
 .socials-container .social {
@@ -138,7 +133,6 @@ a:-webkit-any-link {
   transition: all 0.5s ease-in;
   cursor: pointer;
   z-index: 1;
-
 }
 
 /* Making a dot switch inside the Toggle Button */
@@ -198,4 +192,3 @@ a:-webkit-any-link {
   background-color: var(--white);
   box-shadow: 0px 3px 3px var(--white);
 }
-
