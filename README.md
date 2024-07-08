@@ -4,7 +4,7 @@
 Este é um projeto de uma lista de links que podem ser usadas em perfis de redes sociais.
 
 <p align="center">
-  <img src="./image/logo-projeto.png" alt="Logo do projeto" width="100%" />
+  <img src="./image/preview.png" alt="Preview do Projeto" width="100%" />
 </p>
 
 ## Tecnologias utilizadas
